@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="data:image/icon;" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Web Components Basics</title>
+</head>
+<body>
+  <my-title></my-title>
+
+  <my-product name="Headphones">
+    <span>My product description</span>
+    <span slot="price">R$ 10,00</span>
+  </my-product>
+
+  <button onclick="changeName()">Change Product Name</button>
+  <button onclick="changeNameBack()">Change Product Name Back</button>
+
+  <script src="js/myProduct.js"></script>
+  <script src="js/myTitle.js"></script>
+  <script>
+    function changeName() {
+      document.querySelector('my-product').name = 'Coffee'
+    }
+
+    function changeNameBack() {
+      document.querySelector('my-product').name = 'Headphones'
+    }
+
+    const myProduct = document.querySelector('my-product')
+
+    myProduct.addEventListener('buy', () => {
+      alert('Sold!')
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: #4ac;
+  fill: #ddf7ff;
+  cursor: pointer;
+}
+
+.notify-container {
+  position: absolute;
+  bottom: 125%;
+  z-index: 9;
+  width: 300px;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+  border-radius: 0.5em;
+  padding: 1em;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.show-tooltip {
+  display: block;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}

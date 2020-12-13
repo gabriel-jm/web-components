@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="data:image/icon;" type="image/x-icon">
+  <title>Web Components</title>
+</head>
+<body>
+  <company-header
+    icon="&#x2706;"
+    page-name="My Page"
+  ></company-header>
+
+  <student-attendance-table></student-attendance-table>
+
+  <information-banner></information-banner>
+
+  <time-slot></time-slot>
+
+  <custom-button></custom-button>
+
+  <custom-button></custom-button>
+  <template id="information-banner-template">
+    <div>
+      <a href="tel:123456789">Call: 123456789</a>
+      <div>
+        <p>Just some random street</p>
+        <p>Town</p>
+        <p>State - 123456</p>
+      </div>
+    </div>
+  </template>
+  
+  <script type="module" src="main/index.js"></script>
+</body>
+</html>

@@ -4,6 +4,7 @@ export default class CompanyHeader extends HTMLElement {
   constructor() {
     super()
 
+    this.attachShadow({ mode: 'open' })
     this.render()
   }
 
@@ -11,8 +12,8 @@ export default class CompanyHeader extends HTMLElement {
     return ['icon', 'page-name']
   }
 
-  connectedCallback() {
-
+  querySelector(query) {
+    return this.shadowRoot.querySelector(query)
   }
 
   attributeChangedCallback(name, _oldValue, newValue) {
@@ -32,7 +33,7 @@ export default class CompanyHeader extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>
         .container {
           background-color: #08c;

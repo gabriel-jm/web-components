@@ -32,8 +32,8 @@ export default class CompanyHeader extends HTMLElement {
     name in actions && actions[name]()
   }
 
-  render() {
-    this.shadowRoot.innerHTML = `
+  styles() {
+    return `
       <style>
         .container {
           background-color: #08c;
@@ -64,6 +64,12 @@ export default class CompanyHeader extends HTMLElement {
           text-decoration: none;
         }
       </style>
+    `
+  }
+
+  render() {
+    this.shadowRoot.innerHTML = `
+      ${this.styles()}
 
       <div class="container">
         <div class="title-container">

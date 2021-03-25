@@ -6,9 +6,12 @@
   "author": "Gabriel",
   "license": "ISC",
   "scripts": {
-    "build": "webpack --config ./dev-config/webpack.config.js"
+    "build": "webpack --config ./dev-config/webpack.config.js",
+    "dev": "nodemon --watch 'src/**/*' -e ts --exec 'npm run build && sfs dist'"
   },
   "devDependencies": {
+    "nodemon": "^2.0.7",
+    "simple-files-server": "^3.0.0",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
     "webpack": "^5.28.0",

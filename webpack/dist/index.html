@@ -6,11 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="data:image/icon;" type="image/x-icon">
   <title>Webpack TS + Web Components</title>
+  <style>
+    :root {
+      --bg-color: purple;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    h1 {
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <h1>Hi</h1>
 
   <my-article></my-article>
+
+  <my-title theme="dark">
+    <h1 slot="titulo">Meu titulo</h1>
+    <p>Um texto</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Autem reprehenderit optio iure cupiditate sequi ipsum numquam,
+      magnam nihil et omnis odio architecto eos harum adipisci ullam voluptatum itaque.
+      Incidunt, cupiditate.
+    </p>
+  </my-title>
+
+  <template id="template">
+    <h1>Html guardado</h1>
+  </template>
 
   <script src="main.js"></script>
 </body>

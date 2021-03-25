@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "ESNext",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "strict": true
+  },
+  "include": ["src"]
+}
